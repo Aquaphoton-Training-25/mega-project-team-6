@@ -4,24 +4,25 @@
 #include <string.h>
 #include <SoftwareSerial.h>
 
-#define in1 13        //left_input1
-#define in2 9         //left_input1
-#define EN1 11        //left_enable1
-#define TRIG_PIN1 6   //left_trig
-#define ECHO_PIN1 5   //left_echo 
+#define in1 26        //left_input1
+#define in2 15         //left_input1
+#define EN1 5       //left_enable1
+#define TRIG_PIN1 12   //left_trig
+#define ECHO_PIN1 11   //left_echo 
 //-----------------------------------------
 
-#define in3 2         //right_input2
-#define in4 4         //right_input2
-#define EN2 3         //right_enable2
-#define TRIG_PIN2 10  //right_trig
-#define ECHO_PIN2 A1  //right_echo
+#define in3 4         //right_input2
+#define in4 6         //right_input2
+#define EN2 5        //right_enable2
+#define TRIG_PIN2 16  //right_trig
+#define ECHO_PIN2 A2  //right_echo
 //-----------------------------------------
 
-#define red 12       //red_RGB_led
-#define blue 8       //blue_RGB_led
-#define green 7      //green_RGB_led
+#define red 24       //red_RGB_led
+#define blue 14       //blue_RGB_led
+#define green 13      //green_RGB_led
 //-----------------------------------------
+
 
 
 //*****************************************
