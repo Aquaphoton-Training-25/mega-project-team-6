@@ -1,0 +1,145 @@
+Removed Pin From Net: NetName=RX Pin=U?-1
+Removed Pin From Net: NetName=TX Pin=U?-2
+Removed Pin From Net: NetName=IN3 Pin=U?-3
+Removed Pin From Net: NetName=IN4 Pin=U?-5
+Removed Pin From Net: NetName=ECHO1 Pin=U?-10
+Removed Pin From Net: NetName=TRIG1 Pin=U?-11
+Removed Pin From Net: NetName=GREEN Pin=U?-12
+Removed Pin From Net: NetName=BLUE Pin=U?-13
+Removed Pin From Net: NetName=IN2 Pin=U?-16
+Removed Pin From Net: NetName=TRIG2 Pin=U?-17
+Removed Pin From Net: NetName=EN Pin=U?-18
+Removed Pin From Net: NetName=RED Pin=U?-19
+Removed Member From Class: ClassName=Sheet3 Member=U?
+Added Component: Designator=J1(Terminal Block 2pin)
+Added Component: Designator=J2(Terminal Block 2pin)
+Added Component: Designator=J3(Terminal Block 2pin)
+Added Component: Designator=U1(ATMega 328 P-PU - duplicate)
+Add Pin To Net: Unknown Pin: Pin *-(-)
+Add Pin To Net: Unknown Pin: Pin 100k-1
+Add Pin To Net: Unknown Pin: Pin C1-1
+Add Pin To Net: Unknown Pin: Pin C2-1
+Add Pin To Net: Unknown Pin: Pin C3-1
+Add Pin To Net: Unknown Pin: Pin C4-1
+Add Pin To Net: Unknown Pin: Pin C7-2
+Add Pin To Net: Unknown Pin: Pin C8-1
+Add Pin To Net: Unknown Pin: Pin C9-2
+Add Pin To Net: Unknown Pin: Pin D2-2
+Added Pin To Net: NetName=GND Pin=J1-2
+Add Pin To Net: Unknown Pin: Pin J4-2
+Add Pin To Net: Unknown Pin: Pin J4-3
+Add Pin To Net: Unknown Pin: Pin J4-4
+Add Pin To Net: Unknown Pin: Pin J5-2
+Add Pin To Net: Unknown Pin: Pin J5-4
+Add Pin To Net: Unknown Pin: Pin J6-2
+Add Pin To Net: Unknown Pin: Pin J6-3
+Add Pin To Net: Unknown Pin: Pin J6-4
+Add Pin To Net: Unknown Pin: Pin R8-2
+Add Pin To Net: Unknown Pin: Pin R9-2
+Add Pin To Net: Unknown Pin: Pin R10-2
+Add Pin To Net: Unknown Pin: Pin S?-2
+Added Pin To Net: NetName=RX Pin=U1-2
+Added Pin To Net: NetName=TX Pin=U1-3
+Added Pin To Net: NetName=IN3 Pin=U1-4
+Added Pin To Net: NetName=EN Pin=U1-5
+Added Pin To Net: NetName=IN4 Pin=U1-6
+Added Pin To Net: NetName=GND Pin=U1-8
+Added Pin To Net: NetName=ECHO1 Pin=U1-11
+Added Pin To Net: NetName=TRIG1 Pin=U1-12
+Added Pin To Net: NetName=GREEN Pin=U1-13
+Added Pin To Net: NetName=BLUE Pin=U1-14
+Added Pin To Net: NetName=IN2 Pin=U1-15
+Added Pin To Net: NetName=TRIG2 Pin=U1-16
+Added Pin To Net: NetName=GND Pin=U1-22
+Added Pin To Net: NetName=RED Pin=U1-24
+Add Pin To Net: Unknown Pin: Pin U2-3
+Add Pin To Net: Unknown Pin: Pin U3-1
+Add Pin To Net: Unknown Pin: Pin U3-4
+Add Pin To Net: Unknown Pin: Pin U3-5
+Add Pin To Net: Unknown Pin: Pin U3-7
+Add Pin To Net: Unknown Pin: Pin U3-9
+Add Pin To Net: Unknown Pin: Pin U3-10
+Add Pin To Net: Unknown Pin: Pin U3-12
+Add Pin To Net: Unknown Pin: Pin U3-13
+Add Pin To Net: Unknown Pin: Pin U3-15
+Added Net: Name=+4.5V : 36V
+Added Net: Name=+5
+Added Pin To Net: NetName=+5V Pin=U1-7
+Added Pin To Net: NetName=+5V Pin=U1-20
+Added Net: Name=+5V
+Added Pin To Net: NetName=CUR_SIG Pin=U1-27
+Added Net: Name=CUR_SIG
+Added Pin To Net: NetName=ECHO2 Pin=U1-25
+Added Net: Name=ECHO2
+Added Pin To Net: NetName=IN1 Pin=U1-26
+Added Net: Name=IN1
+Added Pin To Net: NetName=LED_ind Pin=U1-23
+Added Net: Name=LED_ind
+Added Pin To Net: NetName=MISO Pin=U1-18
+Added Net: Name=MISO
+Added Pin To Net: NetName=MOSI Pin=U1-17
+Added Net: Name=MOSI
+Added Net: Name=Net1k_2
+Added Net: Name=Net100k_2
+Added Net: Name=Net*_B
+Added Net: Name=Net*_G
+Added Net: Name=Net*_R
+Added Pin To Net: NetName=NetC3_2 Pin=U1-9
+Added Net: Name=NetC3_2
+Added Pin To Net: NetName=NetC4_2 Pin=U1-10
+Added Net: Name=NetC4_2
+Added Pin To Net: NetName=NetC8_2 Pin=U1-21
+Added Net: Name=NetC8_2
+Added Pin To Net: NetName=OUT1 Pin=J2-2
+Added Net: Name=OUT1
+Added Pin To Net: NetName=OUT2 Pin=J2-1
+Added Net: Name=OUT2
+Added Pin To Net: NetName=OUT3 Pin=J3-2
+Added Net: Name=OUT3
+Added Pin To Net: NetName=OUT4 Pin=J3-1
+Added Net: Name=OUT4
+Added Pin To Net: NetName=Reset Pin=U1-1
+Added Net: Name=Reset
+Added Pin To Net: NetName=SCK Pin=U1-19
+Added Net: Name=SCK
+Added Net: Name=VCC
+Added Pin To Net: NetName=Vin Pin=J1-1
+Added Net: Name=Vin
+Added Pin To Net: NetName=VOLT_SIG Pin=U1-28
+Added Net: Name=VOLT_SIG
+Add Class Member: Failed to add class member : Component * RGB LED
+Add Class Member: Failed to add class member : Component 1k Resistor
+Add Class Member: Failed to add class member : Component 10K Resistor
+Add Class Member: Failed to add class member : Component 100k Resistor
+Add Class Member: Failed to add class member : Component C1 CAP 0.33uF
+Add Class Member: Failed to add class member : Component C2 Cap 0.1uF
+Add Class Member: Failed to add class member : Component C3 CAP 22pF
+Add Class Member: Failed to add class member : Component C4 CAP 22pF
+Add Class Member: Failed to add class member : Component C5 CAP 30pF
+Add Class Member: Failed to add class member : Component C6 CAP 30pF
+Add Class Member: Failed to add class member : Component C7 CAP 10uF
+Add Class Member: Failed to add class member : Component C8 Cap 0.1uF
+Add Class Member: Failed to add class member : Component C9 CAP 10uF
+Add Class Member: Failed to add class member : Component D1 1N5819 SMD Diode
+Add Class Member: Failed to add class member : Component D2 LED
+Added Member To Class: ClassName=Sheet3 Member=Component J1 Terminal Block
+Added Member To Class: ClassName=Sheet3 Member=Component J2 Terminal Block
+Added Member To Class: ClassName=Sheet3 Member=Component J3 Terminal Block
+Add Class Member: Failed to add class member : Component J4 Headers 4pin
+Add Class Member: Failed to add class member : Component J5 Headers 4pin
+Add Class Member: Failed to add class member : Component J6 Headers 4pin
+Add Class Member: Failed to add class member : Component J9 Headers 4pin
+Add Class Member: Failed to add class member : Component Q1 IRF5305 P-MOSFET
+Add Class Member: Failed to add class member : Component R8 Resistor
+Add Class Member: Failed to add class member : Component R9 Resistor
+Add Class Member: Failed to add class member : Component R10 Resistor
+Add Class Member: Failed to add class member : Component S? Push Button
+Added Member To Class: ClassName=Sheet3 Member=Component U1 Atmega328p
+Add Class Member: Failed to add class member : Component U2 LM7805
+Add Class Member: Failed to add class member : Component U3 L293D
+Add Class Member: Failed to add class member : Component XC? Crystal oscillator
+Added Rule: Name=Schematic Supply Nets_1
+Added Rule: Name=Schematic Supply Nets_2
+Added Rule: Name=Schematic Supply Nets_3
+Added Rule: Name=Schematic Supply Nets_4
+Added Rule: Name=Schematic Supply Nets_5

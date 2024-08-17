@@ -1,0 +1,15 @@
+Removed Member From Class: ClassName=Sheet3 Member=D3
+Added Component: Designator=D(RGB LED)
+Add Pin To Net: Unknown Pin: Pin D1-1
+Add Pin To Net: Unknown Pin: Pin D1-2
+Added Pin To Net: NetName=GND Pin=D-1
+Added Pin To Net: NetName=NetD_2 Pin=D-2
+Added Pin To Net: NetName=NetD_2 Pin=R5-1
+Added Net: Name=NetD_2
+Added Pin To Net: NetName=NetD_3 Pin=D-3
+Added Pin To Net: NetName=NetD_3 Pin=R4-1
+Added Net: Name=NetD_3
+Added Pin To Net: NetName=NetD_4 Pin=D-4
+Added Pin To Net: NetName=NetD_4 Pin=R3-1
+Added Net: Name=NetD_4
+Added Member To Class: ClassName=Sheet3 Member=Component D RGB LED
