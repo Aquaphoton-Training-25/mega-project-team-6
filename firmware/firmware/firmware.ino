@@ -6,14 +6,13 @@
 
 #define in1 A3        //left_input1
 #define in2 9         //left_input1
-#define EN1 3       //left_enable1
+#define EN 3       //enable for both pins
 #define TRIG_PIN1 6   //left_trig
 #define ECHO_PIN1 5  //left_echo 
 //-----------------------------------------
 
 #define in3 2         //right_input2
 #define in4 4         //right_input2
-#define EN2 3        //right_enable2
 #define TRIG_PIN2 10  //right_trig
 #define ECHO_PIN2 A2  //right_echo
 //-----------------------------------------
@@ -52,6 +51,16 @@ String speed;     // variable takes speed as string from user
 int sp;           //variable controls speed level
 int safe_distance; // fixed distance from wall 
 
+float kp = 1.0;  // Proportional gain
+float ki = 0.5;  // Integral gain
+float kd = 0.1;  // Derivative gain
+
+float right_previous_error = 0; //intialization of right wall ditance error
+float left_previous_error = 0;   //intialization of left wall ditance error
+
+float integral_right = 0; //intilization of right integral variable
+float integral_left = 0;  //intilization of left integral variable
+
 void setup() {
   Serial.begin(9600);  // Baud rate for Serial Monitor
   BluetoothSerial.begin(9600);  // Baud rate for Bluetooth Module
@@ -61,8 +70,7 @@ void setup() {
   pinMode(in2, OUTPUT);
   pinMode(in3, OUTPUT);
   pinMode(in4, OUTPUT);
-  pinMode(EN1, OUTPUT);
-  pinMode(EN2, OUTPUT);
+  pinMode(EN, OUTPUT);
   pinMode(TRIG_PIN1, OUTPUT);
   pinMode(ECHO_PIN1, INPUT);
   pinMode(TRIG_PIN2, OUTPUT);
@@ -168,8 +176,7 @@ float readVoltage() {
 //****************************************
 
 void Forward() {
-  analogWrite(EN1, sp);   
-  analogWrite(EN2, sp);
+  analogWrite(EN, sp);   
   digitalWrite(in1, HIGH);   //left wheel moves forward
   digitalWrite(in2, LOW);
   digitalWrite(in3, HIGH);   // Right wheel moves forward
@@ -178,8 +185,7 @@ void Forward() {
 }
 
 void Backward() {
-  analogWrite(EN1, sp);   
-  analogWrite(EN2, sp);
+  analogWrite(EN, sp);   
   digitalWrite(in1, LOW);   //left wheel moves Backward
   digitalWrite(in2, HIGH);
   digitalWrite(in3, LOW);   // Right wheel moves Backward
@@ -188,8 +194,7 @@ void Backward() {
 }
 
 void Right() {
-  analogWrite(EN1, sp);   
-  analogWrite(EN2, sp);
+  analogWrite(EN, sp);   
   digitalWrite(in1, HIGH);   //left wheel moves Forward
   digitalWrite(in2, LOW);
   digitalWrite(in3, LOW);   //Right wheel moves Backward
@@ -198,8 +203,7 @@ void Right() {
 }
 
 void Left() {
-  analogWrite(EN1, sp);   
-  analogWrite(EN2, sp);
+  analogWrite(EN, sp);   
   digitalWrite(in1, LOW);   //left wheel moves Backward
   digitalWrite(in2, HIGH);
   digitalWrite(in3, HIGH);   // Right wheel moves Forward
@@ -208,8 +212,7 @@ void Left() {
 }
 
 void Stop() {
-  analogWrite(EN1, 0);   // when sending to ENABLE 0 it stops moving 
-  analogWrite(EN2, 0);
+  analogWrite(EN, 0);   // when sending to ENABLE 0 it stops moving 
   digitalWrite(in1, LOW);  
   digitalWrite(in2, LOW);
   digitalWrite(in3, LOW);   
@@ -298,43 +301,56 @@ void Autonomous() {
     BluetoothSerial.print("Distance_left: ");
     BluetoothSerial.print(distance_left);
     BluetoothSerial.println(" cm");
-
-    // Stop if the distance is less than the safe distance and then move in the opposite direction
-    if (distance_left < safe_distance || distance_right < safe_distance) {
+   if (distance_right < safe_distance || distance_left < safe_distance) {
       Stop();
-      delay(200);
-      
-      if (distance_left < safe_distance) { // close to left wall 
+
+      // Calculate errors
+      float error_left = safe_distance - distance_left;   //error is difference between safe ditance and left distance
+      float error_right = safe_distance - distance_right;
+
+      // PID control for left wall
+      integral_left += error_left;
+      float derivative_left = error_left - left_previous_error;
+      float correction_left = kp * error_left + ki * integral_left + kd * derivative_left;
+      left_previous_error = error_left;    //update left previous error
+
+      // PID control for right wall
+      integral_right += error_right;
+      float derivative_right = error_right - right_previous_error;
+      float correction_right = kp * error_right + ki * integral_right + kd * derivative_right;
+      right_previous_error = error_right;     //update right previous error
+      float abs_correction_left = abs(correction_left); //positive value only allowed
+      float abs_correction_right = abs(correction_right); //positive value only allowed
+
+      // Adjust the car's direction based on the corrections
+      if (abs_correction_left > abs_correction_right) {
         Right();
-        delay(500); // Turn for a short time
+        delay(300); // Adjust this delay for tuning
         Stop();
-      }
-      
-      if (distance_right < safe_distance) { // close to right wall
+        Forward();
+        delay(300); // Ensure it aligns parallel again
+        Stop();
+        
+
+      } else if (abs_correction_right > abs_correction_left) {
         Left();
-        delay(500); // Turn for a short time
+        delay(300); // Adjust this delay for fine-tuning
         Stop();
+        Forward();
+        delay(300); // Ensure it aligns parallel again
+        Stop();
+      
       }
     } else {
-      // Adjust direction based on distance
-      if (distance_left > distance_right) {
-        // If the car is too far from the left wall, turn slightly left
-        Left();
-        delay(200); // Adjust this delay to fine-tune the correction
-        Stop();
-      } else if (distance_right > distance_left) {
-        // If the car is too far from the right wall, turn slightly right
-        Right();
-        delay(200); // Adjust this delay to fine-tune the correction
-        Stop();
-      }
-      
-     else {
+      // If the distances are balanced, move straight forward
       Forward();
+      delay(600); // Adjust this delay for the duration of the forward movement
     }
-    }
-    
 
-    delay(600); // Add delay 1 sec to control the loop speed
+    delay(300);
   }
 }
+
+
+
+
