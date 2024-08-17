@@ -38,8 +38,8 @@ SoftwareSerial BluetoothSerial(10, 11); // RX, TX
 //*****************************************
 
 
-#define CURRENT_SENSOR_PIN A0   
-#define VOLTAGE_SENSOR_PIN A2   
+#define CURRENT_SENSOR_PIN A4   
+#define VOLTAGE_SENSOR_PIN A5   
 
 //*****************************************
 // Variable Declaration
@@ -190,20 +190,20 @@ void Backward() {
 void Right() {
   analogWrite(EN1, sp);   
   analogWrite(EN2, sp);
-  digitalWrite(in1, LOW);   //left wheel moves Backward
-  digitalWrite(in2, HIGH);
-  digitalWrite(in3, HIGH);   //Right wheel moves Forward
-  digitalWrite(in4, LOW);  
+  digitalWrite(in1, HIGH);   //left wheel moves Forward
+  digitalWrite(in2, LOW);
+  digitalWrite(in3, LOW);   //Right wheel moves Backward
+  digitalWrite(in4, HIGH);  
   delay(1000);   //1 second
 }
 
 void Left() {
   analogWrite(EN1, sp);   
   analogWrite(EN2, sp);
-  digitalWrite(in1, HIGH);   //left wheel moves Forward
-  digitalWrite(in2, LOW);
-  digitalWrite(in3, LOW);   // Right wheel moves backward
-  digitalWrite(in4, HIGH);  
+  digitalWrite(in1, LOW);   //left wheel moves Backward
+  digitalWrite(in2, HIGH);
+  digitalWrite(in3, HIGH);   // Right wheel moves Forward
+  digitalWrite(in4, LOW);  
   delay(1000);  //1 second
 }
 
@@ -312,11 +312,10 @@ void Autonomous() {
         Left();
       }
       
-      delay(1000); // Adjust this delay as needed
     } else {
       Forward();
     }
 
-    delay(1000); // Add delay 1 sec to control the loop speed
+    delay(600); // Add delay 1 sec to control the loop speed
   }
 }
