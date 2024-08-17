@@ -30,7 +30,7 @@
 //*****************************************
 
 
-SoftwareSerial BluetoothSerial(10, 11); // RX, TX
+SoftwareSerial BluetoothSerial(0, 1); // RX, TX
 
 
 //*****************************************
