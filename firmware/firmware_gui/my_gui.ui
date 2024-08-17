@@ -31,7 +31,7 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-image: url(:/images/aqua.jfif);
+     <string notr="true">image: url(:/images/aqua.jfif);
 color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
@@ -267,7 +267,7 @@ font: 75 italic 20pt &quot;Times New Roman&quot;;</string>
      <string/>
     </property>
     <property name="icon">
-     <iconset resource="../Mega project gui/images/aqua_image.qrc">
+     <iconset resource="images/aqua_image.qrc">
       <normaloff>:/images/car.PNG</normaloff>:/images/car.PNG</iconset>
     </property>
     <property name="iconSize">
@@ -297,7 +297,7 @@ font: 75 italic 20pt &quot;Times New Roman&quot;;</string>
      <string/>
     </property>
     <property name="icon">
-     <iconset resource="../Mega project gui/images/aqua_image.qrc">
+     <iconset resource="images/aqua_image.qrc">
       <normaloff>:/images/low.PNG</normaloff>:/images/low.PNG</iconset>
     </property>
     <property name="iconSize">
@@ -309,6 +309,61 @@ font: 75 italic 20pt &quot;Times New Roman&quot;;</string>
     <property name="flat">
      <bool>false</bool>
     </property>
+   </widget>
+   <widget class="QLineEdit" name="current_position">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>540</y>
+      <width>131</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);
+font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="placeholderText">
+     <string>current position</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>540</y>
+      <width>161</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QLineEdit" name="lineEdit">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="placeholderText">
+        <string>voltage sensor readings</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEdit_2">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="placeholderText">
+        <string>current sensor readings</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -324,7 +379,7 @@ font: 75 italic 20pt &quot;Times New Roman&quot;;</string>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources>
-  <include location="../Mega project gui/images/aqua_image.qrc"/>
+  <include location="images/aqua_image.qrc"/>
  </resources>
  <connections/>
 </ui>

@@ -9,6 +9,8 @@
 from PyQt6 import QtCore, QtGui, QtWidgets
 from PyQt6.QtGui import QIcon, QPixmap
 from Button_dialog import Ui_Button_dialog
+from auto_dialog import Ui_Dialog
+
 
 
 class Ui_MainWindow(object):
@@ -22,19 +24,23 @@ class Ui_MainWindow(object):
         self.ui = Ui_Button_dialog()
         self.ui.setupUi(self.window) 
         self.window.hide()
-
+    def openautoWindow(self):         #function to open auto
+        self.window = QtWidgets.QDialog()
+        self.ui = Ui_Dialog()
+        self.ui.setupUi(self.window) 
+        self.window.show()  
+   
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(1166, 862)
         MainWindow.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
         MainWindow.setStyleSheet("background-color: rgb(0, 0, 34);\n"
-                              
 "")
         self.centralwidget = QtWidgets.QWidget(parent=MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.label = QtWidgets.QLabel(parent=self.centralwidget)
         self.label.setGeometry(QtCore.QRect(480, -10, 191, 191))
-        self.label.setStyleSheet("background-image: url(images/aqua.jfif);\n"
+        self.label.setStyleSheet("image: url(images/aqua.jfif);\n"
 "color: rgb(255, 255, 255);")
         self.label.setText("")
         self.label.setObjectName("label")
@@ -104,7 +110,7 @@ class Ui_MainWindow(object):
         self.manual_pushButton.setFlat(False)
         self.manual_pushButton.setObjectName("manual_pushButton")
         self.manual_pushButton.clicked.connect(self.return_car_icon_color)
-        self.manual_pushButton.clicked.connect(self.openbuttonsWindow)
+        self.manual_pushButton.clicked.connect(self.openbuttonsWindow) #open buttons wnidow
         self.horizontalLayout_2.addWidget(self.manual_pushButton)
         self.auto_pushButton = QtWidgets.QPushButton(parent=self.horizontalLayoutWidget_2)
         self.auto_pushButton.setStyleSheet("background-color: rgb(255, 255, 255);\n"
@@ -114,9 +120,9 @@ class Ui_MainWindow(object):
         self.auto_pushButton.setAutoExclusive(True)
         self.auto_pushButton.setObjectName("auto_pushButton")
         self.auto_pushButton.clicked.connect(self.change_car_icon_color) 
-        self.auto_pushButton.clicked.connect(self.closebuttonsindow) 
+        self.auto_pushButton.clicked.connect(self.closebuttonsindow) #close button window
+        self.auto_pushButton.clicked.connect(self.openautoWindow) #open auto window
         self.horizontalLayout_2.addWidget(self.auto_pushButton)
-       
         self.line_2 = QtWidgets.QFrame(parent=self.centralwidget)
         self.line_2.setGeometry(QtCore.QRect(560, 620, 20, 141))
         self.line_2.setStyleSheet("background-color: rgb(255, 255, 255);")
@@ -135,16 +141,37 @@ class Ui_MainWindow(object):
         self.car_indicator.setFlat(True)
         self.car_indicator.setObjectName("car_indicator")
         self.lowspeed_indicator = QtWidgets.QPushButton(parent=self.centralwidget)
-        self.lowspeed_indicator.setGeometry(QtCore.QRect(790, 530, 121, 91))
+        self.lowspeed_indicator.setGeometry(QtCore.QRect(780, 530, 121, 81))
         self.lowspeed_indicator.setStyleSheet("background-color: rgb(255, 255, 255);\n"
 "")
         self.lowspeed_indicator.setText("")
         icon1 = QtGui.QIcon()
         icon1.addPixmap(QtGui.QPixmap("images/low.PNG"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.lowspeed_indicator.setIcon(icon1)
-        self.lowspeed_indicator.setIconSize(QtCore.QSize(100, 100))
-        self.lowspeed_indicator.setFlat(True)
+        self.lowspeed_indicator.setIconSize(QtCore.QSize(90, 100))
+        self.lowspeed_indicator.setFlat(False)
         self.lowspeed_indicator.setObjectName("lowspeed_indicator")
+        self.current_position = QtWidgets.QLineEdit(parent=self.centralwidget)
+        self.current_position.setGeometry(QtCore.QRect(510, 540, 131, 71))
+        self.current_position.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+"font: 10pt \"MS Shell Dlg 2\";")
+        self.current_position.setText("")
+        self.current_position.setObjectName("current_position")
+        self.verticalLayoutWidget = QtWidgets.QWidget(parent=self.centralwidget)
+        self.verticalLayoutWidget.setGeometry(QtCore.QRect(10, 540, 161, 71))
+        self.verticalLayoutWidget.setObjectName("verticalLayoutWidget")
+        self.verticalLayout = QtWidgets.QVBoxLayout(self.verticalLayoutWidget)
+        self.verticalLayout.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout.setObjectName("verticalLayout")
+        self.lineEdit = QtWidgets.QLineEdit(parent=self.verticalLayoutWidget)
+        self.lineEdit.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.lineEdit.setObjectName("lineEdit")
+        self.verticalLayout.addWidget(self.lineEdit)
+        self.lineEdit_2 = QtWidgets.QLineEdit(parent=self.verticalLayoutWidget)
+        self.lineEdit_2.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.lineEdit_2.setText("")
+        self.lineEdit_2.setObjectName("lineEdit_2")
+        self.verticalLayout.addWidget(self.lineEdit_2)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(parent=MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 1166, 26))
@@ -153,7 +180,6 @@ class Ui_MainWindow(object):
         self.statusbar = QtWidgets.QStatusBar(parent=MainWindow)
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
-
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
@@ -166,13 +192,16 @@ class Ui_MainWindow(object):
         self.label_3.setToolTip(_translate("MainWindow", "<html><head/><body><p align=\"justify\"><br/></p></body></html>"))
         self.label_3.setText(_translate("MainWindow", "Speed"))
         self.low_pushButton.setText(_translate("MainWindow", "Low"))
-        self.low_pushButton.clicked.connect(self.low_speed_icon_color) 
+        self.low_pushButton.clicked.connect(self.low_speed_icon_color) #
         self.medium_pushButton.setText(_translate("MainWindow", "Medium"))
-        self.medium_pushButton.clicked.connect(self.medium_speed_icon_color) 
+        self.medium_pushButton.clicked.connect(self.medium_speed_icon_color) #
         self.high_pushButton.setText(_translate("MainWindow", "High"))
-        self.high_pushButton.clicked.connect(self.high_speed_icon_color) 
+        self.high_pushButton.clicked.connect(self.high_speed_icon_color)   #
         self.manual_pushButton.setText(_translate("MainWindow", "Manual"))
         self.auto_pushButton.setText(_translate("MainWindow", "Autonomous"))
+        self.current_position.setPlaceholderText(_translate("MainWindow", "current position"))
+        self.lineEdit.setPlaceholderText(_translate("MainWindow", "voltage sensor readings"))
+        self.lineEdit_2.setPlaceholderText(_translate("MainWindow", "current sensor readings"))
     def change_car_icon_color(self):                    
         # Change the color of the car icon to blue
          blue_pixmap = QPixmap("images/car_blue.png")
@@ -193,7 +222,7 @@ class Ui_MainWindow(object):
     def high_speed_icon_color(self):            #Change the color of the speed icon to green
          high_pixmap = QPixmap("images/high.png")
          icon1 = QIcon(high_pixmap)
-         self.lowspeed_indicator.setIcon(icon1)
+         self.lowspeed_indicator.setIcon(icon1)  
 
 
 if __name__ == "__main__":
