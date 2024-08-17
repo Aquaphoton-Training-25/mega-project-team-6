@@ -312,7 +312,7 @@ void Autonomous() {
       
       if (distance_right < safe_distance) { // close to right wall
         Left();
-        delay(500); // Turn for a short timec:\PerfLogs
+        delay(500); // Turn for a short time
         Stop();
       }
     } else {
