@@ -306,15 +306,34 @@ void Autonomous() {
       
       if (distance_left < safe_distance) { // close to left wall 
         Right();
+        delay(500); // Turn for a short time
+        Stop();
       }
       
       if (distance_right < safe_distance) { // close to right wall
         Left();
+        delay(500); // Turn for a short timec:\PerfLogs
+        Stop();
+      }
+    } else {
+      // Adjust direction based on distance
+      if (distance_left > distance_right) {
+        // If the car is too far from the left wall, turn slightly left
+        Left();
+        delay(200); // Adjust this delay to fine-tune the correction
+        Stop();
+      } else if (distance_right > distance_left) {
+        // If the car is too far from the right wall, turn slightly right
+        Right();
+        delay(200); // Adjust this delay to fine-tune the correction
+        Stop();
       }
       
-    } else {
+     else {
       Forward();
     }
+    }
+    
 
     delay(600); // Add delay 1 sec to control the loop speed
   }
