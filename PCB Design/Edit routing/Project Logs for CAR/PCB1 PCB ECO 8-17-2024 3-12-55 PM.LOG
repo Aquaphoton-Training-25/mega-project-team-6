@@ -1,0 +1,9 @@
+Removed Pin From Net: NetName=VCC Pin=Q1-3
+Removed Pin From Net: NetName=VCC Pin=R1-2
+Added Component: Designator=D1(1N5819 SMD Diode)
+Added Pin To Net: NetName=VCC Pin=D1-2
+Added Pin To Net: NetName=NetD1_1 Pin=D1-1
+Added Pin To Net: NetName=NetD1_1 Pin=Q1-3
+Added Pin To Net: NetName=NetD1_1 Pin=R1-2
+Added Net: Name=NetD1_1
+Added Member To Class: ClassName=Sheet3 Member=Component D1 1N5819 SMD Diode

@@ -1,0 +1,15 @@
+Added Component: Designator=J8(Header 4pin)
+Add Pin To Net: Unknown Pin: Pin D1-1
+Add Pin To Net: Unknown Pin: Pin D1-2
+Add Pin To Net: Unknown Pin: Pin D3-(-
+Add Pin To Net: Unknown Pin: Pin D3-B
+Add Pin To Net: Unknown Pin: Pin D3-G
+Add Pin To Net: Unknown Pin: Pin D3-R
+Added Pin To Net: NetName=+4.5V : 36V Pin=J8-1
+Added Pin To Net: NetName=GND Pin=J8-2
+Added Pin To Net: NetName=GND Pin=J8-3
+Added Pin To Net: NetName=VOLT_SIG Pin=J8-4
+Add Pin To Net: Unknown Pin: Pin Q1-D
+Add Pin To Net: Unknown Pin: Pin Q1-G
+Add Pin To Net: Unknown Pin: Pin Q1-S
+Added Member To Class: ClassName=Sheet3 Member=Component J8 VOLTAGE SENSOR

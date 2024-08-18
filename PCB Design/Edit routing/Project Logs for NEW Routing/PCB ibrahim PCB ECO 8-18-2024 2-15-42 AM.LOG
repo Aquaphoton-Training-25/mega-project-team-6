@@ -1,0 +1,8 @@
+Added Component: Designator=D3(RGB LED)
+Added Pin To Net: NetName=GND Pin=D3-1
+Added Pin To Net: NetName=NetD3_2 Pin=D3-2
+Added Pin To Net: NetName=NetD3_3 Pin=D3-3
+Added Pin To Net: NetName=NetD3_4 Pin=D3-4
+Added Member To Class: ClassName=Sheet3 Member=Component D3 RGB LED
+Added Member To Class: ClassName=Sheet3 Member=Component R6 RES 1K
+Added Member To Class: ClassName=Sheet3 Member=Component U1 Atmega328p

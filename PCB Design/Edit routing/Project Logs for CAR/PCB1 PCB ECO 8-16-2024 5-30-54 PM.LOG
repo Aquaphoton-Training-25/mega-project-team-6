@@ -1,0 +1,52 @@
+Removed Pin From Net: NetName=GND Pin=C6-1
+Removed Member From Class: ClassName=Sheet3 Member=C6
+Added Component: Designator=*(Cuurent_sens)
+Added Component: Designator=C10(CAP 0.1uF)
+Added Component: Designator=C11(CAP 1nF)
+Added Component: Designator=C12(CAP 0.1uF)
+Added Component: Designator=J9(Terminal Block 2pin)
+Add component (AddParameter): Name = "Mfr number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Parameter 2"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Parameter 3"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Parameter 4"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=R7(Res100K)
+Added Component: Designator=R8(Res10K)
+Added Pin To Net: NetName=VCC Pin=*-1
+Added Pin To Net: NetName=VCC Pin=*-2
+Added Pin To Net: NetName=+4.5V : 36V Pin=*-3
+Added Pin To Net: NetName=+4.5V : 36V Pin=*-4
+Added Pin To Net: NetName=GND Pin=*-5
+Added Pin To Net: NetName=CUR_SIG Pin=*-7
+Added Pin To Net: NetName=+5V Pin=*-8
+Added Pin To Net: NetName=GND Pin=C10-1
+Added Pin To Net: NetName=+5V Pin=C10-2
+Added Pin To Net: NetName=GND Pin=C11-1
+Added Pin To Net: NetName=GND Pin=C12-1
+Added Pin To Net: NetName=+5V Pin=C12-2
+Add Pin To Net: Unknown Pin: Pin D1-1
+Add Pin To Net: Unknown Pin: Pin D1-2
+Add Pin To Net: Unknown Pin: Pin D3-(-
+Add Pin To Net: Unknown Pin: Pin D3-B
+Add Pin To Net: Unknown Pin: Pin D3-G
+Add Pin To Net: Unknown Pin: Pin D3-R
+Added Pin To Net: NetName=GND Pin=J9-2
+Add Pin To Net: Unknown Pin: Pin Q1-D
+Add Pin To Net: Unknown Pin: Pin Q1-G
+Add Pin To Net: Unknown Pin: Pin Q1-S
+Added Pin To Net: NetName=VOLT_SIG Pin=R7-1
+Added Pin To Net: NetName=GND Pin=R8-1
+Added Pin To Net: NetName=VOLT_SIG Pin=R8-2
+Added Pin To Net: NetName=+5V Pin=U3-16
+Added Pin To Net: NetName=Net*_6 Pin=*-6
+Added Pin To Net: NetName=Net*_6 Pin=C11-2
+Added Net: Name=Net*_6
+Added Pin To Net: NetName=NetJ9_1 Pin=J9-1
+Added Pin To Net: NetName=NetJ9_1 Pin=R7-2
+Added Net: Name=NetJ9_1
+Added Member To Class: ClassName=Sheet3 Member=Component * CURRENT_SEN ACS712
+Added Member To Class: ClassName=Sheet3 Member=Component C10 Cap 0.1uF
+Added Member To Class: ClassName=Sheet3 Member=Component C11 CAP 1nF
+Added Member To Class: ClassName=Sheet3 Member=Component C12 Cap 0.1uF
+Added Member To Class: ClassName=Sheet3 Member=Component J9 TerminalBlock 2pin
+Added Member To Class: ClassName=Sheet3 Member=Component R7 RES 30K
+Added Member To Class: ClassName=Sheet3 Member=Component R8 RES 10K

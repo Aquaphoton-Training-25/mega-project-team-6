@@ -1,0 +1,6 @@
+Added Component: Designator=J4(Header 4pin)
+Added Pin To Net: NetName=+5V Pin=J4-1
+Added Pin To Net: NetName=ECHO1 Pin=J4-2
+Added Pin To Net: NetName=TRIG1 Pin=J4-3
+Added Pin To Net: NetName=GND Pin=J4-4
+Added Member To Class: ClassName=Sheet3 Member=Component J4 UltraSonic 1

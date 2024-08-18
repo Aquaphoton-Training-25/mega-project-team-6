@@ -1,0 +1,166 @@
+Added Component: Designator=C1(Cap 10uF)
+Added Component: Designator=C2(Cap 100nF)
+Added Component: Designator=C3(Cap 100nF)
+Added Component: Designator=C4(Cap 100nF)
+Added Component: Designator=C5(Cap 22pF)
+Added Component: Designator=C6(Cap 22pF)
+Added Component: Designator=D2(LED)
+Added Component: Designator=D3(RGB LED)
+Added Component: Designator=J1(Terminal Block 2pin)
+Add component (AddParameter): Name = "Mfr number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Parameter 2"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Parameter 3"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Parameter 4"; Value = ""; VariantName = "[No Variations]"
+Add Component: Footprint Not Found Header 9 pins
+Added Component: Designator=J3(Terminal Block 2pin)
+Add component (AddParameter): Name = "Mfr number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Parameter 2"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Parameter 3"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Parameter 4"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=J4(Header 4pin)
+Added Component: Designator=J5(Header 4pin)
+Added Component: Designator=J6(Header 4pin)
+Added Component: Designator=J7(Header 4pin)
+Added Component: Designator=J8(Header 2pins)
+Added Component: Designator=J9(Headers 3pins)
+Added Component: Designator=J10(Header 2pins)
+Added Component: Designator=J11(Header 2pins)
+Added Component: Designator=Q1(IRF5305)
+Added Component: Designator=R1(Res100K)
+Added Component: Designator=R3(Res 1K)
+Added Component: Designator=R4(Res 1K)
+Added Component: Designator=R5(Res 1K)
+Added Component: Designator=R6(Res 1K)
+Added Component: Designator=U1(ATMega 328 P-PU - duplicate)
+Added Component: Designator=U2(LM7805)
+Added Component: Designator=Y(Crrystal 16MHZ)
+Added Pin To Net: NetName=+5V Pin=C1-1
+Added Pin To Net: NetName=GND Pin=C1-2
+Added Pin To Net: NetName=GND Pin=C2-1
+Added Pin To Net: NetName=+5V Pin=C2-2
+Added Pin To Net: NetName=GND Pin=C3-1
+Added Pin To Net: NetName=VCC Pin=C3-2
+Added Pin To Net: NetName=GND Pin=C4-1
+Added Pin To Net: NetName=+5V Pin=C4-2
+Added Pin To Net: NetName=GND Pin=C5-1
+Added Pin To Net: NetName=NetC5_2 Pin=C5-2
+Added Pin To Net: NetName=GND Pin=C6-1
+Added Pin To Net: NetName=NetD2_1 Pin=D2-1
+Added Pin To Net: NetName=GND Pin=D2-2
+Added Pin To Net: NetName=GND Pin=D3-1
+Added Pin To Net: NetName=NetD3_2 Pin=D3-2
+Added Pin To Net: NetName=NetD3_3 Pin=D3-3
+Added Pin To Net: NetName=NetD3_4 Pin=D3-4
+Add Pin To Net: Unknown Pin: Pin J1-J?
+Add Pin To Net: Unknown Pin: Pin J1-J?
+Add Pin To Net: Unknown Pin: Pin J2-1
+Add Pin To Net: Unknown Pin: Pin J2-2
+Add Pin To Net: Unknown Pin: Pin J2-3
+Add Pin To Net: Unknown Pin: Pin J2-4
+Add Pin To Net: Unknown Pin: Pin J2-5
+Add Pin To Net: Unknown Pin: Pin J2-6
+Add Pin To Net: Unknown Pin: Pin J3-J?
+Add Pin To Net: Unknown Pin: Pin J3-J?
+Added Pin To Net: NetName=+5V Pin=J4-1
+Added Pin To Net: NetName=TRIG1 Pin=J4-2
+Added Pin To Net: NetName=ECHO1 Pin=J4-3
+Added Pin To Net: NetName=GND Pin=J4-4
+Added Pin To Net: NetName=+5V Pin=J5-1
+Added Pin To Net: NetName=TRIG2 Pin=J5-2
+Added Pin To Net: NetName=ECHO2 Pin=J5-3
+Added Pin To Net: NetName=GND Pin=J5-4
+Added Pin To Net: NetName=+5V Pin=J6-1
+Added Pin To Net: NetName=GND Pin=J6-2
+Added Pin To Net: NetName=TX Pin=J6-3
+Added Pin To Net: NetName=RX Pin=J6-4
+Added Pin To Net: NetName=MOSI Pin=J7-1
+Added Pin To Net: NetName=MISO Pin=J7-2
+Added Pin To Net: NetName=SCK Pin=J7-3
+Added Pin To Net: NetName=Reset Pin=J7-4
+Added Pin To Net: NetName=VCC Pin=J8-1
+Added Pin To Net: NetName=GND Pin=J8-2
+Added Pin To Net: NetName=CUR_SIG Pin=J9-2
+Added Pin To Net: NetName=GND Pin=J9-3
+Added Pin To Net: NetName=VCC Pin=J10-1
+Added Pin To Net: NetName=GND Pin=J10-2
+Added Pin To Net: NetName=VOLT_SIG Pin=J11-1
+Added Pin To Net: NetName=GND Pin=J11-2
+Added Pin To Net: NetName=Vin Pin=Q1-1
+Added Pin To Net: NetName=VCC Pin=Q1-2
+Added Pin To Net: NetName=GND Pin=R1-1
+Added Pin To Net: NetName=NetD3_4 Pin=R3-1
+Added Pin To Net: NetName=BLUE Pin=R3-2
+Added Pin To Net: NetName=NetD3_3 Pin=R4-1
+Added Pin To Net: NetName=GREEN Pin=R4-2
+Added Pin To Net: NetName=NetD3_2 Pin=R5-1
+Added Pin To Net: NetName=RED Pin=R5-2
+Added Pin To Net: NetName=NetD2_1 Pin=R6-1
+Added Pin To Net: NetName=LED_ind Pin=R6-2
+Added Pin To Net: NetName=Reset Pin=U1-1
+Added Pin To Net: NetName=RX Pin=U1-2
+Added Pin To Net: NetName=TX Pin=U1-3
+Added Pin To Net: NetName=IN3 Pin=U1-4
+Added Pin To Net: NetName=EN Pin=U1-5
+Added Pin To Net: NetName=IN4 Pin=U1-6
+Added Pin To Net: NetName=+5V Pin=U1-7
+Added Pin To Net: NetName=GND Pin=U1-8
+Added Pin To Net: NetName=NetC5_2 Pin=U1-9
+Added Pin To Net: NetName=ECHO1 Pin=U1-11
+Added Pin To Net: NetName=TRIG1 Pin=U1-12
+Added Pin To Net: NetName=GREEN Pin=U1-13
+Added Pin To Net: NetName=BLUE Pin=U1-14
+Added Pin To Net: NetName=IN2 Pin=U1-15
+Added Pin To Net: NetName=TRIG2 Pin=U1-16
+Added Pin To Net: NetName=MOSI Pin=U1-17
+Added Pin To Net: NetName=MISO Pin=U1-18
+Added Pin To Net: NetName=SCK Pin=U1-19
+Added Pin To Net: NetName=+5V Pin=U1-20
+Added Pin To Net: NetName=GND Pin=U1-22
+Added Pin To Net: NetName=LED_ind Pin=U1-23
+Added Pin To Net: NetName=RED Pin=U1-24
+Added Pin To Net: NetName=ECHO2 Pin=U1-25
+Added Pin To Net: NetName=IN1 Pin=U1-26
+Added Pin To Net: NetName=CUR_SIG Pin=U1-27
+Added Pin To Net: NetName=VOLT_SIG Pin=U1-28
+Added Pin To Net: NetName=VCC Pin=U2-1
+Added Pin To Net: NetName=+5V Pin=U2-2
+Added Pin To Net: NetName=GND Pin=U2-3
+Added Pin To Net: NetName=NetC5_2 Pin=Y-2
+Added Pin To Net: NetName=+5 Pin=J9-1
+Added Net: Name=+5
+Added Pin To Net: NetName=NetC6_2 Pin=C6-2
+Added Pin To Net: NetName=NetC6_2 Pin=U1-10
+Added Pin To Net: NetName=NetC6_2 Pin=Y-1
+Added Net: Name=NetC6_2
+Added Pin To Net: NetName=NetQ1_3 Pin=Q1-3
+Added Pin To Net: NetName=NetQ1_3 Pin=R1-2
+Added Net: Name=NetQ1_3
+Added Member To Class: ClassName=Sheet3 Member=Component C1 CAP 10uF
+Added Member To Class: ClassName=Sheet3 Member=Component C2 CAP 100nF
+Added Member To Class: ClassName=Sheet3 Member=Component C3 CAP 100nF
+Added Member To Class: ClassName=Sheet3 Member=Component C4 CAP 100nF
+Added Member To Class: ClassName=Sheet3 Member=Component C5 CAP 22pF
+Added Member To Class: ClassName=Sheet3 Member=Component C6 CAP 22pF
+Added Member To Class: ClassName=Sheet3 Member=Component D2 LED
+Added Member To Class: ClassName=Sheet3 Member=Component D3 RGB LED
+Added Member To Class: ClassName=Sheet3 Member=Component J1 Input Power
+Add Class Member: Failed to add class member : Component J2 Motor drive pins
+Added Member To Class: ClassName=Sheet3 Member=Component J3 Motor power
+Added Member To Class: ClassName=Sheet3 Member=Component J4 UltraSonic 1
+Added Member To Class: ClassName=Sheet3 Member=Component J5 UtraSonic 2
+Added Member To Class: ClassName=Sheet3 Member=Component J6 Bluetooth Module
+Added Member To Class: ClassName=Sheet3 Member=Component J7 Arduino as ISP
+Added Member To Class: ClassName=Sheet3 Member=Component J8 Measured Current
+Added Member To Class: ClassName=Sheet3 Member=Component J9 Current sensor
+Added Member To Class: ClassName=Sheet3 Member=Component J10 Measured Voltage
+Added Member To Class: ClassName=Sheet3 Member=Component J11 Voltage sensor
+Added Member To Class: ClassName=Sheet3 Member=Component Q1 IRF5305 P-MOSFET
+Added Member To Class: ClassName=Sheet3 Member=Component R1 RES 100K
+Added Member To Class: ClassName=Sheet3 Member=Component R3 RES 1K
+Added Member To Class: ClassName=Sheet3 Member=Component R4 RES 1K
+Added Member To Class: ClassName=Sheet3 Member=Component R5 RES 1K
+Added Member To Class: ClassName=Sheet3 Member=Component R6 RES 1K
+Added Member To Class: ClassName=Sheet3 Member=Component U1 Atmega328p
+Added Member To Class: ClassName=Sheet3 Member=Component U2 LM7805
+Added Member To Class: ClassName=Sheet3 Member=Component Y Crystal oscillator
+Added Rule: Name=Schematic Supply Nets_1

@@ -1,0 +1,24 @@
+Added Component: Designator=D3(RGB LED)
+Added Component: Designator=J4(Header 4pin)
+Added Component: Designator=R3(Res 1K)
+Added Component: Designator=R4(Res 1K)
+Added Component: Designator=R5(Res 1K)
+Added Pin To Net: NetName=GND Pin=D3-1
+Added Pin To Net: NetName=NetD3_2 Pin=D3-2
+Added Pin To Net: NetName=NetD3_3 Pin=D3-3
+Added Pin To Net: NetName=NetD3_4 Pin=D3-4
+Added Pin To Net: NetName=+5V Pin=J4-1
+Added Pin To Net: NetName=TRIG1 Pin=J4-2
+Added Pin To Net: NetName=ECHO1 Pin=J4-3
+Added Pin To Net: NetName=GND Pin=J4-4
+Added Pin To Net: NetName=NetD3_4 Pin=R3-1
+Added Pin To Net: NetName=BLUE Pin=R3-2
+Added Pin To Net: NetName=NetD3_3 Pin=R4-1
+Added Pin To Net: NetName=GREEN Pin=R4-2
+Added Pin To Net: NetName=NetD3_2 Pin=R5-1
+Added Pin To Net: NetName=RED Pin=R5-2
+Added Member To Class: ClassName=Sheet3 Member=Component D3 RGB LED
+Added Member To Class: ClassName=Sheet3 Member=Component J4 UltraSonic 1
+Added Member To Class: ClassName=Sheet3 Member=Component R3 RES 1K
+Added Member To Class: ClassName=Sheet3 Member=Component R4 RES 1K
+Added Member To Class: ClassName=Sheet3 Member=Component R5 RES 1K

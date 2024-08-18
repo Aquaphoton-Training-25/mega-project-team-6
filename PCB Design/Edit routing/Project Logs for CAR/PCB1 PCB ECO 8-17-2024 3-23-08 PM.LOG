@@ -1,0 +1,5 @@
+Added Pin To Net: NetName=VCC Pin=J8-1
+Added Pin To Net: NetName=VCC Pin=U3-8
+Added Pin To Net: NetName=VCC Pin=U4-3
+Added Pin To Net: NetName=VCC Pin=U4-4
+Added Member To Class: ClassName=Sheet3 Member=Component D1 1N5819 SMD Diode
