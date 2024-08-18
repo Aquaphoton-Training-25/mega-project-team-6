@@ -7,8 +7,8 @@
 #define in1 A3        //left_input1
 #define in2 9         //left_input1
 #define EN 3       //enable for both pins
-#define TRIG_PIN1 6   //left_trig
-#define ECHO_PIN1 5  //left_echo 
+#define TRIG_PIN1 5   //left_trig
+#define ECHO_PIN1 6 //left_echo 
 //-----------------------------------------
 
 #define in3 2         //right_input2
