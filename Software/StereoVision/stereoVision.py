@@ -1,3 +1,5 @@
+#required pipelines
+
 # 1. Calibration:
 # 1. You need to compare each two images of the same scenario and select a set of matching
 # features. You can use any inbuilt function for feature matching (SIFT and corner detection)
@@ -29,10 +31,8 @@
 # depth information instead.
 # 2. You need to save the depth image as a gray scale and color image using heat map conversion.
 
-
 import cv2
 import numpy as np
-
 
 img1 = cv2.imread('im11.png', cv2.IMREAD_GRAYSCALE)
 img2 = cv2.imread('im00.png', cv2.IMREAD_GRAYSCALE)
@@ -138,7 +138,6 @@ cv2.imshow('left epipolar lines',cv2.resize(ep_imgLeft,(650,512)))
 cv2.imshow('right epiolar lines', cv2.resize(ep_imgRight,(650,512)))
 cv2.waitKey(0)
 cv2.destroyAllWindows()
-
 #3-correspondence
 #disparity using StereoBM
 stereo = cv2.StereoBM_create(numDisparities=128, blockSize=7) #block matching   #16,15
@@ -149,19 +148,20 @@ disparity = np.uint8(disparity)
 cv2.imshow('Disparity', cv2.resize(disparity,(1024,1024)))
 cv2.waitKey(0)
 cv2.destroyAllWindows()
-# 3.2 Save Disparity Map as grayscale and heatmap images
 cv2.imwrite('disparity_grayscale.png', disparity)
-# Apply heatmap
+
+
+#heatmap
 disparity_color = cv2.applyColorMap(disparity, cv2.COLORMAP_JET)
 cv2.imwrite('disparity_heatmap.png', disparity_color)
-
+cv2.imshow('',disparity_color)
 #4-depth image
 # get depth using disparity
-focal_length = 1.0
-baseline = 0.1
-depth = (focal_length * baseline) / (disparity + 1e-6)
+focal_length =1.0 #random value
+baseline = 0.1   #random value(m)
+depth= (focal_length*baseline)/ (disparity + 1e-6)
 depth_grayscale = (depth - depth.min()) / (depth.max() - depth.min())#-->grayscale
-depth_grayscale = (depth_grayscale * 255).astype(np.uint8)
+depth_grayscale= (depth_grayscale * 255).astype(np.uint8)
 cv2.imshow('Depth Map', cv2.resize(depth_grayscale, (1024, 512)))
 cv2.waitKey(0)
 cv2.destroyAllWindows()
