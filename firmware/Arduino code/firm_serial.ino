@@ -21,6 +21,8 @@
 #define blue 8   //blue_RGB_led
 #define green 7  //green_RGB_led
 //-----------------------------------------
+#define CURRENT_SENSOR_PIN A4   //current sensor
+#define VOLTAGE_SENSOR_PIN A5    //voltage sensor
 
 
 //*****************************************
@@ -60,6 +62,10 @@ void setup() {
   pinMode(ECHO_PIN1, INPUT);
   pinMode(TRIG_PIN2, OUTPUT);
   pinMode(ECHO_PIN2, INPUT);
+  pinMode(red, OUTPUT);
+  pinMode(blue, OUTPUT);
+  pinMode(green, OUTPUT);
+
 }
 
 void loop() {
@@ -95,6 +101,7 @@ void loop() {
       digitalWrite(green, HIGH);
       delay(1000);
     } 
+
     
   }
 
@@ -114,6 +121,16 @@ void loop() {
       Autonomous();   
     } 
   }  
+  // Read and send current and voltage values
+  float current = readCurrent();
+  float voltage = readVoltage();
+  Serial.print("Current: ");
+  Serial.print(current);
+  Serial.println(" A");
+  Serial.print("Voltage: ");
+  Serial.print(voltage);
+  Serial.println(" V");
+  delay(5000);
 }
 
 //****************************************
@@ -212,6 +229,18 @@ void PID() {
     delay(150); 
     Stop();
   }
+}
+float readCurrent() {                                          //current sensor
+  int sensorValue = analogRead(CURRENT_SENSOR_PIN);
+  float voltage = (sensorValue / 1023.0) * 5.0;
+  float current = (voltage - 2.5) / 0.185;
+  return current;
+}
+
+float readVoltage() {                           //voltage sensor
+  int sensorValue = analogRead(VOLTAGE_SENSOR_PIN);
+  float voltage = (sensorValue / 1023.0) * 5.0;
+  return voltage;
 }
 
 // Function to read ultrasonic sensors
